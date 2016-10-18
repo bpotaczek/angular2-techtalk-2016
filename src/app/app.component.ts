@@ -7,8 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app works!';
+  buttonPushed = false;
+  colors = ['black', 'red', 'green', 'blue'];
+  selectedColor = 'black';
 
   update() {
-    this.title = 'button works!';
+    this.buttonPushed = true;
   }
 }

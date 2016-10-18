@@ -1,5 +1,9 @@
-<h1>
-  {{title}}<br>
-  <input [(ngModel)]="title" />
-  <button (click)="update()">Update</button>
-</h1>
+<h1 [style.color]="selectedColor">{{title}}</h1>
+<input [(ngModel)]="title" /><br>
+<div *ngIf="buttonPushed">
+  The button has been pushed! What color would you like?<br>
+  <template ngFor let-color [ngForOf]="colors"> 
+    <input type="radio" value="{{color}}" [(ngModel)]="selectedColor">{{color}}<br>
+  </template>
+</div>
+<button (click)="update()">Pick</button>
