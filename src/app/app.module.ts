@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { ColorService } from './color.service';
+import { NameResolve } from './name.resolve.service';
 import { ComponentAComponent } from './component-a/component-a.component';
 import { ComponentBComponent } from './component-b/component-b.component';
 import { ComponentCComponent } from './component-c/component-c.component';
@@ -24,7 +25,7 @@ import { AppRoutes } from './app.routes';
     FormsModule,
     HttpModule
   ],
-  providers: [ColorService],
+  providers: [ColorService, NameResolve],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
