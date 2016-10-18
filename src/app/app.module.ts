@@ -20,7 +20,7 @@ import { ModuleBModule } from './module-b';
     BrowserModule,
     FormsModule,
     HttpModule,
-    // ModuleAModule,
+    ModuleAModule,
     ModuleBModule
   ],
   providers: [ColorService, NameResolve],
