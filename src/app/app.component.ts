@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ColorService } from './color.service';
 
 @Component({
   selector: 'app-root',
@@ -8,10 +9,13 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'app works!';
   buttonPushed = false;
-  colors = ['black', 'red', 'green', 'blue'];
+  colors: Array<string>;
   selectedColor = 'black';
 
+  constructor(private colorService: ColorService) {}
+
   update() {
+    this.colors = this.colorService.getColors();
     this.buttonPushed = true;
   }
 }
