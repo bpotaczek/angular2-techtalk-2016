@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { ColorService } from './color.service';
+import { BetterColorService } from './bettercolor.service';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,7 @@ import { ColorService } from './color.service';
     FormsModule,
     HttpModule
   ],
-  providers: [ColorService],
+  providers: [{provide: ColorService, useClass: BetterColorService}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
