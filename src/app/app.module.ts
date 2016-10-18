@@ -7,23 +7,21 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { ColorService } from './color.service';
 import { NameResolve } from './name.resolve.service';
-import { ComponentAComponent } from './component-a/component-a.component';
-import { ComponentBComponent } from './component-b/component-b.component';
-import { ComponentCComponent } from './component-c/component-c.component';
 import { AppRoutes } from './app.routes';
+import { ModuleAModule } from './module-a';
+import { ModuleBModule } from './module-b';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    ComponentAComponent,
-    ComponentBComponent,
-    ComponentCComponent
+    AppComponent
   ],
   imports: [
     RouterModule.forRoot(AppRoutes),
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    ModuleAModule,
+    ModuleBModule
   ],
   providers: [ColorService, NameResolve],
   bootstrap: [AppComponent]

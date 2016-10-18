@@ -4,7 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-component-b',
   templateUrl: './component-b.component.html',
-  styleUrls: ['./component-b.component.css']
+  styleUrls: ['./component-b.component.css'],
 })
 export class ComponentBComponent implements OnInit {
   resolve: string;
