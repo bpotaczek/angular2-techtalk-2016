@@ -1,3 +1,5 @@
 <h1>
-  {{title}}
+  {{title}}<br>
+  <input [(ngModel)]="title" />
+  <button (click)="update()">Update</button>
 </h1>
