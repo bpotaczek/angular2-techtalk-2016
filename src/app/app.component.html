@@ -1,9 +1,29 @@
 <h1 [style.color]="selectedColor">{{title}}</h1>
 <input [(ngModel)]="title" /><br>
+
+
 <div *ngIf="buttonPushed">
   The button has been pushed! What color would you like?<br>
-  <template ngFor let-color [ngForOf]="colors"> 
-    <input type="radio" value="{{color}}" [(ngModel)]="selectedColor">{{color}}<br>
-  </template>
+  <ul>
+    <li *ngFor="let c of colors">
+      <input type="radio" value="{{c}}" [(ngModel)]="selectedColor">{{c}}
+    </li>
+  </ul>
 </div>
+
+<!--
+<template [ngIf]="buttonPushed">
+  <div>
+    The button has been pushed! What color would you like?<br>
+    <ul>
+      <template ngFor let-color [ngForOf]="colors">
+        <li> 
+          <input type="radio" value="{{color}}" [(ngModel)]="selectedColor">{{color}}
+        </li>
+      </template>
+    </ul>
+  </div>
+</template>-->
+
 <button (click)="update()">Pick</button>
+
