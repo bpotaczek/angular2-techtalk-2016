@@ -8,7 +8,6 @@ import { AppComponent } from './app.component';
 import { ColorService } from './color.service';
 import { NameResolve } from './name.resolve.service';
 import { AppRoutes } from './app.routes';
-import { ModuleAModule } from './module-a';
 import { ModuleBModule } from './module-b';
 
 @NgModule({
@@ -20,7 +19,6 @@ import { ModuleBModule } from './module-b';
     BrowserModule,
     FormsModule,
     HttpModule,
-    ModuleAModule,
     ModuleBModule
   ],
   providers: [ColorService, NameResolve],
