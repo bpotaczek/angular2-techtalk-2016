@@ -20,3 +20,22 @@ import { BetterColorService } from './bettercolor.service';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+/*
+
+{
+  provide: ColorService, useClass: ColorService
+},
+{
+  provide: TITLE, useValue: 'My Application Title'
+},
+{
+  provide: OldColorService, useExisting: ColorService
+},
+{
+  provide: WrappingColorService, useFactory: (colorResolver) => {
+    return new ColorService(colorResolver.getColor());
+  }, deps: [ ColorResolver ]
+}
+
+*/
